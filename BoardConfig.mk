@@ -28,13 +28,10 @@ TARGET_2ND_CPU_VARIANT := generic
 
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_USES_UNCOMPRESSED_KERNEL := true
-
-BOARD_KERNEL_CMDLINE := # Exynos doesn't take cmdline arguments from boot image
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
-# 000RU = recovery kernel, 000KU = system kernel
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
+TARGET_PREBUILT_KERNEL := device/samsung/gracelte/Image
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --board SRPPD15A000RU --dt device/samsung/gracelte/dtb.img
 
 BOARD_BOOTIMAGE_PARTITION_SIZE     := 0x002800000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x002E00000
@@ -43,13 +40,10 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x64BFFB000 # 0x64C000000 - 20480 (footer)
 BOARD_CACHEIMAGE_PARTITION_SIZE    := 0x00C800000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-TARGET_PREBUILT_KERNEL := device/samsung/gracelte/Image
-TARGET_PREBUILT_DTB := device/samsung/gracelte/dtb.img
-
 # Use this flag if the board has a ext4 partition larger than 2gb
+TARGET_RECOVERY_FSTAB := device/samsung/gracelte/recovery/root/etc/recovery.fstab
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
-BOARD_CUSTOM_BOOTIMG_MK :=  device/samsung/gracelte/bootimg.mk
 
 # TWRP specific build flags
 TW_THEME := portrait_hdpi

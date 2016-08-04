@@ -17,10 +17,11 @@
 LOCAL_PATH := device/samsung/gracelte
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/root/fstab.gracelte:recovery/root/listen_platform_info.xml \
-    $(LOCAL_PATH)/rootdir/root/audio_platform_info.xml:recovery/root/audio_platform_info.xml \
-    $(LOCAL_PATH)/rootdir/root/audio_policy.conf:recovery/root/audio_policy.conf \
-    $(LOCAL_PATH)/rootdir/root/media_codecs.xml:recovery/root/media_codecs.xml \
+    $(LOCAL_PATH)/rootdir/root/fstab.goldfish:recovery/root/fstab.goldfish \
+    $(LOCAL_PATH)/rootdir/root/fstab.ranchu:recovery/root/fstab.ranchu \
+    $(LOCAL_PATH)/rootdir/root/fstab.samsungexynos8890:recovery/root/fstab.samsungexynos8890 \
+    $(LOCAL_PATH)/rootdir/root/fstab.samsungexynos8890.fwup:recovery/root/fstab.samsungexynos8890.fwup \
     $(LOCAL_PATH)/rootdir/root/media_codecs_performance.xml:recovery/root/media_codecs_performance.xml \
-    $(LOCAL_PATH)/rootdir/root/media_profiles.xml:recovery/root/media_profiles.xml \
-    $(LOCAL_PATH)/rootdir/root/audio_ext_spkr.conf:recovery/root/etc/audio_ext_spkr.conf 
+    $(LOCAL_PATH)/rootdir/root/ueventd.goldfish.rc:recovery/root/ueventd.goldfish.rc \
+    $(LOCAL_PATH)/rootdir/root/ueventd.ranchu.rc:recovery/root/etc/ueventd.ranchu.rc \
+    $(LOCAL_PATH)/rootdir/root/ueventd.samsungexynos8890.rc:recovery/root/etc/ueventd.samsungexynos8890.rc
