@@ -1,2 +1,2 @@
-add_lunch_combo omni_herolte-eng
-add_lunch_combo omni_herolte-userdebug
+add_lunch_combo omni_gracelte-eng
+add_lunch_combo omni_gracelte-userdebug
