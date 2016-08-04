@@ -59,6 +59,7 @@ TW_HAS_DOWNLOAD_MODE := true
 TW_NO_EXFAT_FUSE := true
 TW_MTP_DEVICE := "/dev/mtp_usb"
 TW_EXCLUDE_SUPERSU := true
+TW_USE_TOOLBOX := true
 
 # Encryption support
 # - Only enable standard crypto for now to support AOSP/CM crypto
