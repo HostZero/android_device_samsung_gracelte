@@ -34,7 +34,7 @@ BOARD_KERNEL_CMDLINE := # Exynos doesn't take cmdline arguments from boot image
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
 # 000RU = recovery kernel, 000KU = system kernel
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --board SRPOI17A000RU
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 
 BOARD_BOOTIMAGE_PARTITION_SIZE     := 0x002800000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x002E00000
@@ -43,15 +43,13 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x64BFFB000 # 0x64C000000 - 20480 (footer)
 BOARD_CACHEIMAGE_PARTITION_SIZE    := 0x00C800000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-TARGET_PREBUILT_KERNEL := device/samsung/herolte/Image
-TARGET_PREBUILT_DTB := device/samsung/herolte/dtb.img
+TARGET_PREBUILT_KERNEL := device/samsung/gracelte/Image
+TARGET_PREBUILT_DTB := device/samsung/gracelte/dtb.img
 
 # Use this flag if the board has a ext4 partition larger than 2gb
-BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
-BOARD_SUPPRESS_SECURE_ERASE := true
-BOARD_CUSTOM_BOOTIMG_MK :=  device/samsung/herolte/bootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK :=  device/samsung/gracelte/bootimg.mk
 
 # TWRP specific build flags
 TW_THEME := portrait_hdpi
@@ -80,4 +78,4 @@ TW_INCLUDE_CRYPTO := true
 # Init properties from bootloader version, ex. model info
 TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_exynos
-TARGET_LIBINIT_DEFINES_FILE := device/samsung/herolte/init/init_herolte.cpp
+TARGET_LIBINIT_DEFINES_FILE := device/samsung/gracelte/init/init_gracelte.cpp
