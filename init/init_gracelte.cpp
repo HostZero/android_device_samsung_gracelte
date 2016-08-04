@@ -27,33 +27,12 @@
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <stdlib.h>
-
-#include "vendor_init.h"
-#include "property_service.h"
-#include "util.h"
-
-#include "init_exynos.h"
-
 void init_exynos_properties(void)
 {
 	char bootloader[PROP_VALUE_MAX];
 
 	property_get("ro.bootloader", bootloader);
-
-	if (strstr(bootloader, "G930W8")) {
-		/* Canada */
-		property_set("ro.product.model", "SM-G930W8");
-	} else if (strstr(bootloader, "G930X")) {
-		/* store model / prerelease */
-		property_set("ro.product.model", "SM-G930X");
-	} else if (strstr(bootloader, "G930FD")) {
-		/* international duos */
-		property_set("ro.product.model", "SM-G930FD");
-	} else {
-		/* all other variants become international */
-		property_set("ro.product.model", "SM-G930F");
-	}
-	property_set("ro.product.name", "herolte");
-	property_set("ro.product.device", "herolte");
+	property_get("ro.product.model", "SM-N930F");
+	property_set("ro.product.name", "graceltexx");
+	property_set("ro.product.device", "gracelte");
 }
