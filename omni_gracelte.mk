@@ -18,3 +18,9 @@ PRODUCT_MANUFACTURER := samsung
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT=msamsung/graceltexx/gracelte:6.0.1/MMB29K/N930FXXU1APG7:user/release-keys \
     PRIVATE_BUILD_DESC="graceltexx-user 6.0.1 MMB29K N930FXXU1APG7 release-keys"
+
+# device info more...
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.product.model=SM-N930F \
+    ro.product.name=graceltexx \
+    ro.product.device=gracelte 

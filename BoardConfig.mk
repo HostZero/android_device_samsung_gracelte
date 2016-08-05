@@ -41,7 +41,7 @@ BOARD_CACHEIMAGE_PARTITION_SIZE    := 0x00C800000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Use this flag if the board has a ext4 partition larger than 2gb
-TARGET_RECOVERY_FSTAB := device/samsung/gracelte/recovery/root/etc/recovery.fstab
+TARGET_RECOVERY_FSTAB := device/samsung/gracelte/rootdir/root/etc/recovery.fstab
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
