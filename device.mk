@@ -21,7 +21,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/fstab.ranchu:recovery/root/fstab.ranchu \
     $(LOCAL_PATH)/rootdir/root/fstab.samsungexynos8890:recovery/root/fstab.samsungexynos8890 \
     $(LOCAL_PATH)/rootdir/root/fstab.samsungexynos8890.fwup:recovery/root/fstab.samsungexynos8890.fwup \
-    $(LOCAL_PATH)/rootdir/root/media_codecs_performance.xml:recovery/root/media_codecs_performance.xml \
     $(LOCAL_PATH)/rootdir/root/ueventd.goldfish.rc:recovery/root/ueventd.goldfish.rc \
     $(LOCAL_PATH)/rootdir/root/ueventd.ranchu.rc:recovery/root/etc/ueventd.ranchu.rc \
     $(LOCAL_PATH)/rootdir/root/ueventd.samsungexynos8890.rc:recovery/root/etc/ueventd.samsungexynos8890.rc
